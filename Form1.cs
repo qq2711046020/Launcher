@@ -1,15 +1,23 @@
-using Microsoft.Win32;
-using System;
-using System.Diagnostics;
+Ôªøusing System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.Win32;
+using System.Diagnostics;
+using System.IO;
 
-namespace Launch
+namespace Launcher
 {
-    public partial class MainForm : Form
+    public partial class Form1 : Form
     {
         public string EnginePath = "";
         public string ClientPath = "";
-        public MainForm()
+        public Form1()
         {
             InitializeComponent();
             GetEngineDirectory();
@@ -30,7 +38,8 @@ namespace Launch
         private void GetClientDirectory()
         {
             string currentDirName = Directory.GetCurrentDirectory();
-            ClientPath = Directory.GetParent(currentDirName).ToString() + "\\Client.uproject";
+            //ClientPath = Directory.GetParent(currentDirName).ToString() + "\\Client.uproject";
+            ClientPath = currentDirName + "\\Client.uproject";
             this.textBox_Client.Text = ClientPath;
         }
 
@@ -45,7 +54,7 @@ namespace Launch
             return FullCmd;
         }
 
-        // ±‡º≠∆˜
+        // ÁºñËæëÂô®
         private void button1_Click(object sender, EventArgs e)
         {
             if (File.Exists(ClientPath))
@@ -58,11 +67,11 @@ namespace Launch
             }
             else
             {
-                MessageBox.Show("Client≤ª¥Ê‘⁄");
+                MessageBox.Show("Client‰∏çÂ≠òÂú®");
             }
         }
 
-        // ”Œœ∑
+        // Ê∏∏Êàè
         private void button2_Click(object sender, EventArgs e)
         {
             if (File.Exists(ClientPath))
@@ -75,7 +84,7 @@ namespace Launch
             }
             else
             {
-                MessageBox.Show("Client≤ª¥Ê‘⁄");
+                MessageBox.Show("Client‰∏çÂ≠òÂú®");
             }
         }
     }

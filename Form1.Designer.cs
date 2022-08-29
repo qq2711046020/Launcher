@@ -1,6 +1,6 @@
-﻿namespace Launch
+﻿namespace Launcher
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -144,14 +144,14 @@
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox_Engine;
-        private Label label2;
-        private TextBox textBox_Client;
-        private Label label3;
-        private TextBox textBox_CMD;
-        private Button button1;
-        private CheckBox checkBox1;
-        private Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_Engine;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_Client;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox_CMD;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
